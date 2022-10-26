@@ -19,7 +19,7 @@ Then open File > Examples > NTP Client > IsTimeSet
 After that replace The wifi name and password with your own.
 As you see the wifi if not connecting to my board
 
-<img src="/images-manual/wififout.png" width:"300px">
+<img src="/images-manual/wififout.png" width="300px">
 
 So i got an error, after that i googled for for an Adafruit code with time that works with NTP CLient.
 I found this raw code in another manual and changed the wifi name and password to my own and it connected this time.
