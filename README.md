@@ -133,15 +133,16 @@ void loop() {
   delay(2000);
 }
 ~~~
-My code in arduino ir now reading the time 
-<img src="/images-manual/correct-time.png" width="500px">
+My code in arduino is now reading the time. 
+
+<img src="/images-manual/correct-time.png" width="300px">
 
 # 2. Adjust timezone
 
 As you can see the serial monitos says its 11:32:44 but on my clock it's 13:32:44 so we have to adjust the timezone were in
 We are in the timezone GMT + 2 so that means we have to fill in 7200 in stead of 0.
 
-<img src="/images-manual/time7200.png" width="500px">
+<img src="/images-manual/time7200.png" width="300px">
 
 # Connecting time to if statement
 
