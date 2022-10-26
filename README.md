@@ -178,13 +178,13 @@ void loop() {
 ~~~
 
 So i got an error message.
-<img src="/images-manual/pixelerror.png" width="500px">
+<img src="/images-manual/pixelerror.png" width="300px">
 
-I dont know what it means so i started looking for diffirent tips on google. So i tried to write a bit of my own and with googles help. i wanted to say if the hour is 14 i will get a message of hello, it's else suck it boys.
-<img src="/images-manual/if-else.png" width="500px">
-so i tried this and it works
+I dont know what it means so i started looking for diffirent tips on google. So i tried to write a bit of my own and with googles help. i wanted to say if the hour is 14 i will get a message of hello, it's else suck it boys. so i tried this and it works
+<img src="/images-manual/if-else.png" width="300px">
 
-so now we can move on to the part where we say when the time is 14:00 the lights go on and the lights will change to a certain color.
+
+Now we can move on to the part where we say when the time is 14:00 the lights go on and the lights will change to a certain color.
 
 # 3. Light on at certain time
 
@@ -257,11 +257,11 @@ so something is not working.
  this time it worked. the light turned off. 
  
  so i had to try it in a diffirent way. 
- <img src="/images-manual/21error" width:="500px">
+ <img src="/images-manual/21error" width:="300px">
  
  i tried to make diffirent functions but apparently it doesn't recognize 21 hours. 
  so i removed 21 hours to see if it would work but it doesn't work
- <img src="/images-manual/22error.png" width="500px">
+ <img src="/images-manual/22error.png" width="300px">
  
  
  then i tried to copy the whole if statement twice:
@@ -292,15 +292,13 @@ if ( currentHour == 20){
  ~~~
     
  But i got another error message
-     <img src="/images-manual/errorhaakje2.png" width="500px">
+     <img src="/images-manual/errorhaakje2.png" width="300px">
      
-I added 3 of these brackets
-~~~ } 
-~~~
-at the end
-and now it wordks.
+I added 3 of these brackets "}" at the end
 
-I copied the code a couple of times in the if statement and changed the hour by 1+ and now my light works how i want
+and now it wordss.
+
+I copied the code a couple of times in the if statement and changed the hour by 1+ and now my light works how i want and works.
 
 
 
