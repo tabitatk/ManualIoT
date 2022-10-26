@@ -175,7 +175,9 @@ so now we can move on to the part where we say when the time is 14:00 the lights
 # Light on at certain time
 
 so first i tried to look up on google for an Adafruit code to target the LED's. 
-I came across File > Examples > Adafruit Neopixel > Simple. i copied this code and put it in my own code
+I came across File > Examples > Adafruit Neopixel > Simple. i copied this code and put it in my own code.
+i defined the pin to D5 and the number of px to 12.
+
 ~~~ #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
  #include <avr/power.h> // Required for 16 MHz Adafruit Trinket
@@ -188,8 +190,9 @@ I came across File > Examples > Adafruit Neopixel > Simple. i copied this code a
 #define NUMPIXELS 12 // Popular NeoPixel ring size
 
 #define DELAYVAL 500 // Time (in milliseconds) to pause between pixels
-
+~~~
 I copied this code in de void setup:
+~~~
 void setup() {
   // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
   // Any other board, you can remove this part (but no harm leaving it):
@@ -201,5 +204,92 @@ void setup() {
   pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
 }
 ~~~
+
+Then i copied this piece of code in my if & else statement:
+~~~for(int i=0; i<NUMPIXELS; i++) { // For each pixel...
+
+    // pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255
+    // Here we're using a moderately bright green color:
+    pixels.setPixelColor(i, pixels.Color(255, 40, 0));
+
+    pixels.show();   // Send the updated pixel colors to the hardware.
+
+    delay(DELAYVAL); // Pause before next pass through loop
+  }
+  ~~~
+
+- Color in IF statement to ORANGE with RGB
+- Color in ELSE statement to PINK with RGB
+
+i uploaded the code and it works.
+
+# last step
+the only thing i still have left to do is make sure the lights will stay on for a longer period of time and then switch off in stead of changing in color.
+
+I changed these pieces of code
+  ~~~( currentHour == 19, 20, 21, 22, 23, 24)
+  ~~~
+  
+   ~~~pixels.setPixelColor(i, pixels.Color(0, 0, 0));
+   ~~~
+     
+Now i uploaded the code but the color is still orange and i wanted it to turn off because it's not 19 hours yes it's 18 hours now.
+
+so something is not working.
+ i tried this code again:
+  ~~~( currentHour == 19)
+  ~~~
+ 
+ this time it worked. the light turned off. 
+ 
+ so i had to try it in a diffirent way. 
+ <img src="/imagesiot/feed_sharing_3.png" width:"300px">
+ 
+ i tried to make diffirent functions but apparently it doesn't recognize 21 hours. 
+ so i removed 21 hours to see if it would work but it doesn't work
+ <img src="/imagesiot/feed_sharing_3.png" width:"300px">
+ 
+ 
+ then i tried to copy the whole if statement twice:
+   ~~~if ( currentHour == 19){
+    Serial.println("Hallo het is 17");
+    for(int i=0; i<NUMPIXELS; i++) { // For each pixel...
+
+    // pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255
+    // Here we're using a moderately bright green color:
+    pixels.setPixelColor(i, pixels.Color(255, 40, 0));
+
+    pixels.show();   // Send the updated pixel colors to the hardware.
+
+    delay(DELAYVAL); // Pause before next pass through loop
+  }
+if ( currentHour == 20){
+    Serial.println("Hallo het is 17");
+    for(int i=0; i<NUMPIXELS; i++) { // For each pixel...
+
+    // pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255
+    // Here we're using a moderately bright green color:
+    pixels.setPixelColor(i, pixels.Color(255, 40, 0));
+
+    pixels.show();   // Send the updated pixel colors to the hardware.
+
+    delay(DELAYVAL); // Pause before next pass through loop
+  }
+ ~~~
+    
+ But i got another error message
+     <img src="/imagesiot/feed_sharing_3.png" width:"300px">
+     
+I added 3 of these brackets
+~~~ } 
+~~~
+at the end
+and now it wordks.
+
+I copied the code a couple of times in the if statement and changed the hour by 1+ and now my light works how i want
+
+
+
+
 
 
