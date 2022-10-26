@@ -1,9 +1,9 @@
 # ManualIoT
 
-Tabita Krommenhoek
-26-10-2022
-(500833831)
-IoT
+- Tabita Krommenhoek
+- 26-10-2022
+- (500833831)
+- IoT
 
 # Requirments
 - LED light
