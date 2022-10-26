@@ -20,15 +20,18 @@ We’ll use the NTPClient library to get time in our arduino so we can connect t
 <img src="/images-manual/NTPCLientLibrary.png" width="200px">
 
 
-Then open File > Examples > NTP Client > IsTimeSet
+Then open: 
+- File > Examples > NTP Client > IsTimeSet
+
 After that replace The wifi name and password with your own.
 As you see the wifi if not connecting to my board
 
 <img src="/images-manual/wififout.png" width="1000px">
 
-So i got an error, after that i googled for for an Adafruit code with time that works with NTP CLient.
+So i got an error, after that I googled for for an Adafruit code with time that works with NTP CLient.
+
 I found this raw code in another manual and changed the wifi name and password to my own and it connected this time.
-This is the code:
+This is the raw code:
 
 ~~~/*
   Rui Santos
@@ -144,21 +147,22 @@ My code in arduino is now reading the time.
 
 # 2. Adjust timezone
 
-As you can see the serial monitos says its 11:32:44 but on my clock it's 13:32:44 so we have to adjust the timezone were in
-We are in the timezone GMT + 2 so that means we have to fill in 7200 in stead of 0.
+As you can see the serial monitor says its 11:32:44 but on my clock it's 13:32:44 so we have to adjust the timezone we're in.
+We are in the timezone GMT + 2 in Amsterdam so that means we have to fill in 7200 in stead of 0.
 
 <img src="/images-manual/time7200.png" width="300px">
 
 # Connecting time to if statement
 
-After you've changed the timezone you can try to make an if-else statement first, to see if it works. 
+After you've changed the timezone you can try to make an if-else statement first, to see if it works. So that is what I did.
 I googled for an if and else statement in arduino and found this raw code, now you can try to put the code in and see what it does:
 
+~~~ 
 const int analogPin = A0;   // pin that the sensor is attached to
 const int ledPin = 13;      // pin that the LED is attached to
 const int threshold = 400;  // an arbitrary threshold level that's in the range of the analog input
 
-~~~ void setup() {
+void setup() {
   // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
   // initialize serial communications:
@@ -186,7 +190,7 @@ So i got an error message.
 
 <img src="/images-manual/pixelerror.png" width="1000px">
 
-I dont know what it means so i started looking for diffirent tips on google. So i tried to write a bit of my own and with googles help. i wanted to say if the hour is 14 i will get a message of hello, it's else suck it boys. so i tried this and it works
+I dont know what it means so i started looking for diffirent tips on google. I tried to write a bit of my own and with google's help. I wanted to say if the hour is 14 i will get a message of hello, else "suck it boys". So i tried this and it worked.
 <img src="/images-manual/if-else.png" width="300px">
 
 
@@ -194,9 +198,13 @@ Now we can move on to the part where we say when the time is 14:00 the lights go
 
 # 3. Light on at certain time
 
-so first i tried to look up on google for an Adafruit code to target the LED's. 
-I came across File > Examples > Adafruit Neopixel > Simple. i copied this code and put it in my own code.
-i defined the pin to D5 and the number of px to 12.
+So first i tried to look up on google for an Adafruit code to target the LED's. 
+I came across:
+- File > Examples > Adafruit Neopixel > Simple. i copied this code and put it in my own code.
+
+I defined the: 
+- Pin to D5 
+- Number of pixels to 12.
 
 ~~~ #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
@@ -241,7 +249,7 @@ Then i copied this piece of code in my if & else statement:
 - Color in IF statement to ORANGE with RGB
 - Color in ELSE statement to PINK with RGB
 
-i uploaded the code and it works.
+I uploaded the code and it works.
 
 # 5.light on for multiple hours
 the only thing i still have left to do is make sure the lights will stay on for a longer period of time and then switch off in stead of changing in color.
@@ -264,17 +272,17 @@ I tried this code again:
  
  this time it worked. the light turned off. 
  
- so i had to try it in a diffirent way. 
+ so I had to try it in a diffirent way. 
  
  <img src="/images-manual/21error.png" width="1000px">
  
  I tried to make diffirent functions but apparently it doesn't recognize 21 hours. 
- so i removed 21 hours to see if it would work but it doesn't work.
+ so I removed 21 hours to see if it would work but it doesn't work.
  
  <img src="/images-manual/22error.png" width="1000px">
  
  
- then i tried to copy the whole if statement twice:
+ Then i tried to copy the whole if statement twice:
    ~~~
    if ( currentHour == 19){
     Serial.println("Hallo het is 17");
@@ -306,9 +314,7 @@ if ( currentHour == 20){
  
  <img src="/images-manual/errorhaakje2.png" width="1000px">
      
-I added 3 of these brackets "}" at the end
-
-and now it wordss.
+I added 3 of these brackets "}" at the endand now it wordss.
 
 I copied the code a couple of times in the if statement and changed the hour by 1+ and now my light works how i want and works.
 
