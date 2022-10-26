@@ -266,12 +266,12 @@ I tried this code again:
  
  so i had to try it in a diffirent way. 
  
- <img src="/images-manual/21error.png" width="300px">
+ <img src="/images-manual/21error.png" width="1000px">
  
  I tried to make diffirent functions but apparently it doesn't recognize 21 hours. 
  so i removed 21 hours to see if it would work but it doesn't work.
  
- <img src="/images-manual/22error.png" width="300px">
+ <img src="/images-manual/22error.png" width="1000px">
  
  
  then i tried to copy the whole if statement twice:
@@ -304,7 +304,7 @@ if ( currentHour == 20){
     
  But i got another error message. 
  
- <img src="/images-manual/errorhaakje2.png" width="300px">
+ <img src="/images-manual/errorhaakje2.png" width="1000px">
      
 I added 3 of these brackets "}" at the end
 
