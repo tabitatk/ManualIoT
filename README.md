@@ -247,25 +247,28 @@ I changed these pieces of code
    ~~~pixels.setPixelColor(i, pixels.Color(0, 0, 0));
    ~~~
      
-Now i uploaded the code but the color is still orange and i wanted it to turn off because it's not 19 hours yes it's 18 hours now.
+Now i uploaded the code but the color is still orange and i wanted it to turn off because it's not 19 hours yes it's 18 hours now. so something is not working.
 
-so something is not working.
- i tried this code again:
-  ~~~( currentHour == 19)
+I tried this code again:
+  ~~~
+  ( currentHour == 19)
   ~~~
  
  this time it worked. the light turned off. 
  
  so i had to try it in a diffirent way. 
+ 
  <img src="/images-manual/21error" width:="300px">
  
- i tried to make diffirent functions but apparently it doesn't recognize 21 hours. 
- so i removed 21 hours to see if it would work but it doesn't work
+ I tried to make diffirent functions but apparently it doesn't recognize 21 hours. 
+ so i removed 21 hours to see if it would work but it doesn't work.
+ 
  <img src="/images-manual/22error.png" width="300px">
  
  
  then i tried to copy the whole if statement twice:
-   ~~~if ( currentHour == 19){
+   ~~~
+   if ( currentHour == 19){
     Serial.println("Hallo het is 17");
     for(int i=0; i<NUMPIXELS; i++) { // For each pixel...
 
@@ -291,8 +294,9 @@ if ( currentHour == 20){
   }
  ~~~
     
- But i got another error message
-     <img src="/images-manual/errorhaakje2.png" width="300px">
+ But i got another error message. 
+ 
+ <img src="/images-manual/errorhaakje2.png" width="300px">
      
 I added 3 of these brackets "}" at the end
 
