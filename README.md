@@ -11,11 +11,14 @@
 # 1. Installing NTP Library
 
 We’ll use the NTPClient library to get time in our arduino so we can connect the time to light. In Arduino IDE we will go to go Manage Libraries. The Library Manager should open. And were going to select the NTP Library.
+
 <img src="/images-manual/NTPCLientLibrary.png" width:"300px">
+
 
 Then open File > Examples > NTP Client > IsTimeSet
 After that replace The wifi name and password with your own.
 As you see the wifi if not connecting to my board
+
 <img src="/images-manual/wififout.png" width:"300px">
 
 So i got an error, after that i googled for for an Adafruit code with time that works with NTP CLient.
