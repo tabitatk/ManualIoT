@@ -14,7 +14,7 @@ So i got an error, after that i googled for for an Adafruit code with time that 
 I found this raw code in another manual and changed the wifi name and password to my own and it connected this time.
 This is the code:
 
-/*
+~~~/*
   Rui Santos
   Complete project details at https://RandomNerdTutorials.com/esp8266-nodemcu-date-time-ntp-client-server-arduino/
   
@@ -121,6 +121,7 @@ void loop() {
 
   delay(2000);
 }
+~~~
 
 # Adjust timezone
 
@@ -138,7 +139,7 @@ const int analogPin = A0;   // pin that the sensor is attached to
 const int ledPin = 13;      // pin that the LED is attached to
 const int threshold = 400;  // an arbitrary threshold level that's in the range of the analog input
 
-void setup() {
+~~~ void setup() {
   // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
   // initialize serial communications:
@@ -160,6 +161,7 @@ void loop() {
   Serial.println(analogValue);
   delay(1);  // delay in between reads for stability
 }
+~~~
 
 So i got an error message.
 <img src="/imagesiot/feed_sharing_3.png" width:"300px">
@@ -174,7 +176,7 @@ so now we can move on to the part where we say when the time is 14:00 the lights
 
 so first i tried to look up on google for an Adafruit code to target the LED's. 
 I came across File > Examples > Adafruit Neopixel > Simple. i copied this code and put it in my own code
-~~~#include <Adafruit_NeoPixel.h>
+~~~ #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
  #include <avr/power.h> // Required for 16 MHz Adafruit Trinket
 #endif
