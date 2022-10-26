@@ -12,7 +12,7 @@
 
 We’ll use the NTPClient library to get time in our arduino so we can connect the time to light. In Arduino IDE we will go to go Manage Libraries. The Library Manager should open. And were going to select the NTP Library.
 
-<img src="/images-manual/NTPCLientLibrary.png" width:"300px">
+<img src="/images-manual/NTPCLientLibrary.png">
 
 
 Then open File > Examples > NTP Client > IsTimeSet
