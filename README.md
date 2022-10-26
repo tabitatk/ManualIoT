@@ -247,10 +247,12 @@ i uploaded the code and it works.
 the only thing i still have left to do is make sure the lights will stay on for a longer period of time and then switch off in stead of changing in color.
 
 I changed these pieces of code
-  ~~~( currentHour == 19, 20, 21, 22, 23, 24)
+  ~~~
+  ( currentHour == 19, 20, 21, 22, 23, 24)
   ~~~
   
-   ~~~pixels.setPixelColor(i, pixels.Color(0, 0, 0));
+   ~~~
+   pixels.setPixelColor(i, pixels.Color(0, 0, 0));
    ~~~
      
 Now i uploaded the code but the color is still orange and i wanted it to turn off because it's not 19 hours yes it's 18 hours now. so something is not working.
@@ -264,7 +266,7 @@ I tried this code again:
  
  so i had to try it in a diffirent way. 
  
- <img src="/images-manual/21error" width:="300px">
+ <img src="/images-manual/21error" width="300px">
  
  I tried to make diffirent functions but apparently it doesn't recognize 21 hours. 
  so i removed 21 hours to see if it would work but it doesn't work.
