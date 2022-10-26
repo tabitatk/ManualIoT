@@ -174,7 +174,7 @@ so now we can move on to the part where we say when the time is 14:00 the lights
 
 so first i tried to look up on google for an Adafruit code to target the LED's. 
 I came across File > Examples > Adafruit Neopixel > Simple. i copied this code and put it in my own code
-`#include <Adafruit_NeoPixel.h>
+~~~#include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
  #include <avr/power.h> // Required for 16 MHz Adafruit Trinket
 #endif
@@ -198,6 +198,6 @@ void setup() {
 
   pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
 }
-`
+~~~
 
 
