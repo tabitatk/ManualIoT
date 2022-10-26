@@ -1,14 +1,22 @@
 # ManualIoT
 
-# Installing NTP Library
+# Requirments
+- LED light
+- Hardware
+- Arduino IDE
+- NTPClient library
+- Hotspot
+
+
+# 1. Installing NTP Library
 
 We’ll use the NTPClient library to get time in our arduino so we can connect the time to light. In Arduino IDE we will go to go Manage Libraries. The Library Manager should open. And were going to select the NTP Library.
-<img src="/imagesiot/feed_sharing_3.png" width:"300px">
+<img src="/imagesiot/NTPCLientLibrary.png" width:"300px">
 
 Then open File > Examples > NTP Client > IsTimeSet
 After that replace The wifi name and password with your own.
 As you see the wifi if not connecting to my board
-<img src="/imagesiot/feed_sharing_3.png" width:"300px">
+<img src="/imagesiot/wififout.png" width:"300px">
 
 So i got an error, after that i googled for for an Adafruit code with time that works with NTP CLient.
 I found this raw code in another manual and changed the wifi name and password to my own and it connected this time.
@@ -122,13 +130,15 @@ void loop() {
   delay(2000);
 }
 ~~~
+My code in arduino ir now reading the time 
+<img src="correct-time.png" width:"300px">
 
-# Adjust timezone
+# 2. Adjust timezone
 
 As you can see the serial monitos says its 11:32:44 but on my clock it's 13:32:44 so we have to adjust the timezone were in
 We are in the timezone GMT + 2 so that means we have to fill in 7200 in stead of 0.
 
-<img src="/imagesiot/feed_sharing_3.png" width:"300px">
+<img src="time7200.png" width:"300px">
 
 # Connecting time to if statement
 
@@ -164,15 +174,15 @@ void loop() {
 ~~~
 
 So i got an error message.
-<img src="/imagesiot/feed_sharing_3.png" width:"300px">
+<img src="/imagesiot/pixelerror.png" width:"300px">
 
 I dont know what it means so i started looking for diffirent tips on google. So i tried to write a bit of my own and with googles help. i wanted to say if the hour is 14 i will get a message of hello, it's else suck it boys.
-<img src="/imagesiot/feed_sharing_3.png" width:"300px">
+<img src="/imagesiot/if-else.png" width:"300px">
 so i tried this and it works
 
 so now we can move on to the part where we say when the time is 14:00 the lights go on and the lights will change to a certain color.
 
-# Light on at certain time
+# 3. Light on at certain time
 
 so first i tried to look up on google for an Adafruit code to target the LED's. 
 I came across File > Examples > Adafruit Neopixel > Simple. i copied this code and put it in my own code.
@@ -223,7 +233,7 @@ Then i copied this piece of code in my if & else statement:
 
 i uploaded the code and it works.
 
-# last step
+# 5.light on for multiple hours
 the only thing i still have left to do is make sure the lights will stay on for a longer period of time and then switch off in stead of changing in color.
 
 I changed these pieces of code
@@ -243,11 +253,11 @@ so something is not working.
  this time it worked. the light turned off. 
  
  so i had to try it in a diffirent way. 
- <img src="/imagesiot/feed_sharing_3.png" width:"300px">
+ <img src="/imagesiot/21error" width:"300px">
  
  i tried to make diffirent functions but apparently it doesn't recognize 21 hours. 
  so i removed 21 hours to see if it would work but it doesn't work
- <img src="/imagesiot/feed_sharing_3.png" width:"300px">
+ <img src="/imagesiot/22error.png" width:"300px">
  
  
  then i tried to copy the whole if statement twice:
@@ -278,7 +288,7 @@ if ( currentHour == 20){
  ~~~
     
  But i got another error message
-     <img src="/imagesiot/feed_sharing_3.png" width:"300px">
+     <img src="/imagesiot/errorhaakje2.png" width:"300px">
      
 I added 3 of these brackets
 ~~~ } 
