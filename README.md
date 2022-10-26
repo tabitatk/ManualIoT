@@ -1,5 +1,10 @@
 # ManualIoT
 
+Tabita Krommenhoek
+26-10-2022
+(500833831)
+IoT
+
 # Requirments
 - LED light
 - Hardware
@@ -179,7 +184,7 @@ void loop() {
 
 So i got an error message.
 
-<img src="/images-manual/pixelerror.png" width="100px">
+<img src="/images-manual/pixelerror.png" width="1000px">
 
 I dont know what it means so i started looking for diffirent tips on google. So i tried to write a bit of my own and with googles help. i wanted to say if the hour is 14 i will get a message of hello, it's else suck it boys. so i tried this and it works
 <img src="/images-manual/if-else.png" width="300px">
